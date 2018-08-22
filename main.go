@@ -96,20 +96,43 @@ func handler() error {
 
 var messages = map[string][]string{
 	"added": []string{
-		"Congrats to %<fullname>s on their new job as %<a_title>s at @linode, CC @%<twitter>s",
-		"Congrats to %<fullname>s on their new job as %<a_title>s at @linode",
-		"Congrats to %<fullname>s on their new job at @linode, CC @%<twitter>s",
-		"Congrats to %<fullname>s on their new job at @linode",
+		"Congrats to {{.Name}} on their new job as {{.Title}} at @linode, CC @{{.Handle}}",
+		"Congrats to {{.Name}} on their new job as {{.Title}}, CC @{{.Handle}}",
+		"Congrats to {{.Name}} on their new job as {{.Title}} at @linode",
+		"Congrats to {{.Name}} on their new job at @linode, CC @{{.Handle}}",
+		"Congrats to {{.Name}} on their new job at @linode",
 	},
 	"removed": []string{
-		"Best of luck to %<fullname>s in their future endeavors! CC @%<twitter>s",
-		"Best of luck to %<fullname>s in their future endeavors!",
+		"Best of luck to {{.Name}} in their future endeavors! CC @{{.Handle}}",
+		"Best of luck to {{.Name}} in their future endeavors!",
 	},
 	"modified": []string{
-		"Congrats @linode! %<fullname>s evolved into %<a_title>s! CC @%<twitter>s",
-		"Congrats @linode! %<fullname>s evolved into %<a_title>s!",
+		"Congrats @linode! {{.Name}} evolved into {{.Title}}! CC @{{.Handle}}",
+		"Congrats @linode! {{.Name}} evolved into {{.Title}}!",
 	},
 }
+
+type tweetData struct {
+	Name   string
+	Title  string
+	Handle string
+}
+
+// Sourced from https://github.com/rossmeissl/indefinite_article
+//  A_REQUIRING_PATTERNS = /^(([bcdgjkpqtuvwyz]|onc?e|onearmed|onetime|ouija)$|e[uw]|uk|ubi|ubo|oaxaca|ufo|ur[aeiou]|use|ut([^t])|unani|uni(l[^l]|[a-ko-z]))/i
+//  AN_REQUIRING_PATTERNS = /^([aefhilmnorsx]$|hono|honest|hour|heir|[aeiou]|8|11)/i
+//  UPCASE_A_REQUIRING_PATTERNS = /^(UN$)/
+//  UPCASE_AN_REQUIRING_PATTERNS = /^$/ #need if we decide to support acronyms like "XL" (extra-large)
+
+//  def indefinite_article
+//    first_word = to_s.split(/[- ]/).first
+//    if (first_word[AN_REQUIRING_PATTERNS] || first_word[UPCASE_AN_REQUIRING_PATTERNS]) &&
+//       !(first_word[A_REQUIRING_PATTERNS] || first_word[UPCASE_A_REQUIRING_PATTERNS])
+//      'an'
+//    else
+//      'a'
+//    end unless first_word.nil?
+//  end
 
 func alert(kind string, list api.Company) error {
 	// Build message here
