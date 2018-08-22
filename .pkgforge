@@ -1,0 +1,28 @@
+name 'go-hello-linodians'
+org 'akerl'
+
+source(
+  type: 'git',
+  path: '.'
+)
+
+build do
+  run 'make local'
+  run 'cp ./bin/go-hello-linodians_linux ./main'
+  run 'zip payload.zip ./main'
+  cp 'payload.zip'
+end
+
+package(
+  type: 'file',
+  artifacts: [
+    {
+      source: 'payload.zip',
+      name: 'payload.zip'
+    }
+  ]
+)
+
+test do
+  # TODO: add tests
+end
