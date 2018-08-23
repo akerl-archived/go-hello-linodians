@@ -26,6 +26,6 @@ func sendDirectMessage(message string) error {
 			},
 		},
 	}
-	_, err := dmClient.New().Get("events/new.json").QueryStruct(params).ReceiveSuccess()
+	_, err := dmClient.New().Get("events/new.json").QueryStruct(params).ReceiveSuccess(nil)
 	return err
 }
