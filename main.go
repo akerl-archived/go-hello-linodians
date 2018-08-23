@@ -99,7 +99,7 @@ func handler() error {
 		return err
 	}
 
-	return writeOld(oldList)
+	return writeOld(newList)
 }
 
 func loadOld(new api.Company) (api.Company, error) {
