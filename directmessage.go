@@ -40,7 +40,7 @@ func sendDirectMessage(message string) error {
 			},
 		},
 	}
-	resp, err := dmClient.New().Get("events/new.json").QueryStruct(params).ReceiveSuccess(nil)
+	resp, err := dmClient.New().Post("events/new.json").BodyJSON(params).ReceiveSuccess(nil)
 	if err != nil {
 		return err
 	}
