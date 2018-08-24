@@ -37,8 +37,9 @@ func loadConfig() {
 	if err != nil {
 		panic(err)
 	}
+	log.Print("Loaded config")
 	cf.OnError = func(_ *s3.ConfigFile, err error) {
-		log.Print(err)
+		log.Printf("What: %s", err)
 	}
 	cf.Autoreload(60)
 }
@@ -50,6 +51,7 @@ func loadClient() {
 
 	dmClient = sling.New().Client(httpClient).Base("https://api.twitter.com/1.1/direct_messages/")
 	client = twitter.NewClient(httpClient)
+	log.Print("Client configured")
 
 	verifyParams := &twitter.AccountVerifyParams{
 		SkipStatus:   twitter.Bool(true),
@@ -59,6 +61,7 @@ func loadClient() {
 	if err != nil {
 		panic(err)
 	}
+	log.Print("Client validated")
 }
 
 func main() {
@@ -73,18 +76,27 @@ func handler() error {
 	if err != nil {
 		return err
 	}
+	log.Printf("Loaded new list with %d entries", len(newList))
 
 	err = sanityCheck(newList)
 	if err != nil {
 		return err
 	}
+	log.Print("List passed sanity checks")
 
 	oldList, err := loadOld(newList)
 	if err != nil {
 		return err
 	}
+	log.Printf("Loaded old list with %d entries", len(oldList))
 
 	ds := api.Diff(oldList, newList)
+	log.Printf(
+		"Loaded diff: added %d, modified %d, removed %d",
+		len(ds.Added),
+		len(ds.Modified),
+		len(ds.Removed),
+	)
 
 	err = alertList("added", ds.Added)
 	if err != nil {
@@ -99,7 +111,12 @@ func handler() error {
 		return err
 	}
 
-	return writeOld(newList)
+	err = writeOld(newList)
+	if err != nil {
+		return err
+	}
+	log.Print("Wrote list to cache")
+	return nil
 }
 
 func loadOld(new api.Company) (api.Company, error) {
@@ -107,6 +124,7 @@ func loadOld(new api.Company) (api.Company, error) {
 	if err != nil {
 		aerr, ok := err.(awserr.Error)
 		if ok && aerr.Code() == s3api.ErrCodeNoSuchKey {
+			log.Print("cache not found, using new list as old")
 			return new, nil
 		}
 		return api.Company{}, err

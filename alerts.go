@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"log"
 	"strings"
 	"text/template"
 
@@ -40,6 +41,7 @@ func init() {
 		}
 		messageTemplates[key] = templateSlice
 	}
+	log.Print("Loaded templates")
 }
 
 type tweetData struct {
@@ -49,6 +51,7 @@ type tweetData struct {
 }
 
 func alertList(kind string, list api.Company) error {
+	log.Printf("Processing %d alerts, kind == %s", len(list), kind)
 	for _, e := range list {
 		if err := alertIndiv(kind, e); err != nil {
 			return err
@@ -58,28 +61,35 @@ func alertList(kind string, list api.Company) error {
 }
 
 func alertIndiv(kind string, e api.Employee) error {
+	log.Printf("Processing alert for %s", e.Username)
 	options := messageTemplates[kind]
 	message, err := buildMessage(options, e)
 	if err != nil {
 		return err
 	}
+	log.Printf("Built message: %s", message)
 	if kind == "removed" && c.DMRemovals {
+		log.Print("Sending via DM")
 		return sendDirectMessage(message)
 	}
+	log.Print("Sending via tweet")
 	_, _, err = client.Statuses.Update(message, nil)
 	return err
 }
 
 func buildMessage(options []*template.Template, e api.Employee) (string, error) {
 	aTitle := indefinite.AddArticle(e.Title)
+	log.Printf("Parsed indefinite article as: %s", aTitle)
 	twitterURL := e.Social["twitter"]
 	var twitterHandle string
 	if twitterURL == "" {
 		twitterHandle = invalidTwitterHandle
 	} else {
 		twitterParts := strings.Split("/", twitterURL)
+		log.Printf("%+v\n", twitterParts)
 		twitterHandle = twitterParts[len(twitterParts)-1]
 	}
+	log.Printf("Parsed Twitter handle as %s", twitterHandle)
 	td := tweetData{
 		Name:   e.Fullname,
 		Title:  aTitle,
