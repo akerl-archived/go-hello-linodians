@@ -1,31 +1,51 @@
 package main
 
+import (
+	"fmt"
+)
+
 type targetParams struct {
-	RecipientID string `url:"recipient_id"`
+	RecipientID string `json:"recipient_id"`
+}
+
+type messageDataParams struct {
+	Text string `json:"text"`
 }
 
 type messageCreateParams struct {
-	Target      targetParams      `url:"target"`
-	MessageData map[string]string `url:"message_data"`
+	Target      targetParams      `json:"target"`
+	MessageData messageDataParams `json:"message_data"`
 }
 
 type directMessageParams struct {
-	Type          string              `url:"type"`
-	MessageCreate messageCreateParams `url:"message_create"`
+	Type          string              `json:"type"`
+	MessageCreate messageCreateParams `json:"message_create"`
+}
+
+type directMessageEventParams struct {
+	Event directMessageParams `json:"event"`
 }
 
 func sendDirectMessage(message string) error {
-	params := directMessageParams{
-		Type: "message_create",
-		MessageCreate: messageCreateParams{
-			Target: targetParams{
-				RecipientID: c.DMTarget,
-			},
-			MessageData: map[string]string{
-				"text": message,
+	params := directMessageEventParams{
+		Event: directMessageParams{
+			Type: "message_create",
+			MessageCreate: messageCreateParams{
+				Target: targetParams{
+					RecipientID: c.DMTarget,
+				},
+				MessageData: messageDataParams{
+					Text: message,
+				},
 			},
 		},
 	}
-	_, err := dmClient.New().Get("events/new.json").QueryStruct(params).ReceiveSuccess(nil)
-	return err
+	resp, err := dmClient.New().Get("events/new.json").QueryStruct(params).ReceiveSuccess(nil)
+	if err != nil {
+		return err
+	}
+	if resp.StatusCode != 200 {
+		return fmt.Errorf("Bad HTTP code: %d", resp.StatusCode)
+	}
+	return nil
 }
