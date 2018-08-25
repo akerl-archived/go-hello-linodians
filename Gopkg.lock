@@ -18,12 +18,12 @@
   revision = "32e708416ba9c1583a1a90b90b5c9a46366ad504"
 
 [[projects]]
-  digest = "1:f2bd9636334726c32b18c64e7704420b4c607e0f17bd48c620aebcc293114e90"
+  digest = "1:30c0053c3e54cb92a34be30600e3b3f32ccb460e6bfc3d55cca3f38bd456f91d"
   name = "github.com/akerl/go-lambda"
   packages = ["s3"]
   pruneopts = "UT"
-  revision = "4b756535142af8f3bf72deeed9a30d648dff3e18"
-  version = "0.2.0"
+  revision = "c49251216d2820775a5ca66c287485f514810b5f"
+  version = "0.2.2"
 
 [[projects]]
   branch = "master"
@@ -31,7 +31,7 @@
   name = "github.com/akerl/go-linodians"
   packages = ["api"]
   pruneopts = "UT"
-  revision = "4798d55d968812d4aa24a344cb7a6172f3cbac94"
+  revision = "87fbbacd1ba7f25d7c98c38ea72680107fcc1122"
 
 [[projects]]
   digest = "1:66b3310cf22cdc96c35ef84ede4f7b9b370971c4025f394c89a2638729653b11"
@@ -54,7 +54,7 @@
   version = "v1.6.0"
 
 [[projects]]
-  digest = "1:e7e85999d72807693e4882618d6b054b1f5198f904336e30f651c055e72b68dc"
+  digest = "1:45a4fc71157faf7d4a824fe8b917174a73063cbbb93e52ccc80a2244bd5d14ac"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -90,8 +90,8 @@
     "service/sts",
   ]
   pruneopts = "UT"
-  revision = "ea2d2b9a8808d0c390d966daf855a7b3b74bc44e"
-  version = "v1.15.19"
+  revision = "9b02f79e8b963274a4ca7a1468fa57d6e3f87363"
+  version = "v1.15.20"
 
 [[projects]]
   digest = "1:2209584c0f7c9b68c23374e659357ab546e1b70eec2761f03280f69a8fd23d77"
@@ -166,7 +166,7 @@
     "html/atom",
   ]
   pruneopts = "UT"
-  revision = "faa378e6dbaed88bd8100f8bcf09939375c6e8fa"
+  revision = "4bcd98cce591d8c7061bf313d7a3cbad05b58549"
 
 [[projects]]
   digest = "1:342378ac4dcb378a5448dd723f0784ae519383532f5e70ade24132c4c8693202"
