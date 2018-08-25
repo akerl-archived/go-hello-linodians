@@ -85,8 +85,7 @@ func buildMessage(options []*template.Template, e api.Employee) (string, error) 
 	if twitterURL == "" {
 		twitterHandle = invalidTwitterHandle
 	} else {
-		twitterParts := strings.Split("/", twitterURL)
-		log.Printf("%+v\n", twitterParts)
+		twitterParts := strings.Split(twitterURL, "/")
 		twitterHandle = twitterParts[len(twitterParts)-1]
 	}
 	log.Printf("Parsed Twitter handle as %s", twitterHandle)
