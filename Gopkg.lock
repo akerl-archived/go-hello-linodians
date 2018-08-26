@@ -158,7 +158,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:c1a52a1cfe481501b51274730129678754287271226b42dbdd81cb1af13da3de"
+  digest = "1:a7aef54caba8554b7d3f1e6042e1d06070635229913f8d59ebbd14fc1a9faa0b"
   name = "golang.org/x/net"
   packages = [
     "context",
@@ -166,7 +166,7 @@
     "html/atom",
   ]
   pruneopts = "UT"
-  revision = "4bcd98cce591d8c7061bf313d7a3cbad05b58549"
+  revision = "8a410e7b638dca158bf9e766925842f6651ff828"
 
 [[projects]]
   digest = "1:342378ac4dcb378a5448dd723f0784ae519383532f5e70ade24132c4c8693202"
