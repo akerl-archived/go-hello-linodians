@@ -15,7 +15,7 @@
   name = "github.com/akerl/go-indefinite-article"
   packages = ["indefinite"]
   pruneopts = "UT"
-  revision = "e5a4c5458fea24de5184d69c42ac979c03dc73a6"
+  revision = "17d51e9457e7e65ede18bffd114517469d5476b7"
 
 [[projects]]
   digest = "1:2c73359f7de026bb96d5f00bea4e0d163108934589e49844c7abaf6fe728dc73"
@@ -31,7 +31,7 @@
   name = "github.com/akerl/go-linodians"
   packages = ["api"]
   pruneopts = "UT"
-  revision = "4b783a1133fbd758ce5c7a624d47563f4ac0d9f0"
+  revision = "b8d79b3261b8f6df07b001ccfe2e7d0bdc2a35a6"
 
 [[projects]]
   digest = "1:66b3310cf22cdc96c35ef84ede4f7b9b370971c4025f394c89a2638729653b11"
