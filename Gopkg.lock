@@ -15,7 +15,7 @@
   name = "github.com/akerl/go-indefinite-article"
   packages = ["indefinite"]
   pruneopts = "UT"
-  revision = "17d51e9457e7e65ede18bffd114517469d5476b7"
+  revision = "b0fecdc559bae8e5ba04a87a5cc783de635b553e"
 
 [[projects]]
   digest = "1:2c73359f7de026bb96d5f00bea4e0d163108934589e49844c7abaf6fe728dc73"
@@ -31,7 +31,7 @@
   name = "github.com/akerl/go-linodians"
   packages = ["api"]
   pruneopts = "UT"
-  revision = "b8d79b3261b8f6df07b001ccfe2e7d0bdc2a35a6"
+  revision = "6a489b22af721d82842eb68bf2d67c546b6e949e"
 
 [[projects]]
   digest = "1:66b3310cf22cdc96c35ef84ede4f7b9b370971c4025f394c89a2638729653b11"
@@ -54,7 +54,7 @@
   version = "v1.6.0"
 
 [[projects]]
-  digest = "1:d2016179158c4fe8dfe6bbd99a19ef2ea3551b522c4e236064febf8d67ddffa6"
+  digest = "1:1808bbdc0c45b7a2beae51e52c6cf96ce72bd006246b4e78a289a7e0b709d4b0"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -90,8 +90,8 @@
     "service/sts",
   ]
   pruneopts = "UT"
-  revision = "80ad2657c5ff975b642b1febb11c3fcfd747c057"
-  version = "v1.15.28"
+  revision = "1186f7e6f000ce13edff71ed5ecc8b0e27ba38d7"
+  version = "v1.15.33"
 
 [[projects]]
   digest = "1:2209584c0f7c9b68c23374e659357ab546e1b70eec2761f03280f69a8fd23d77"
@@ -158,7 +158,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:a7aef54caba8554b7d3f1e6042e1d06070635229913f8d59ebbd14fc1a9faa0b"
+  digest = "1:24641a15105cc4281b8a4a701ac4019194618102c327b1495485b3f19ffdd53e"
   name = "golang.org/x/net"
   packages = [
     "context",
@@ -166,7 +166,7 @@
     "html/atom",
   ]
   pruneopts = "UT"
-  revision = "8a410e7b638dca158bf9e766925842f6651ff828"
+  revision = "26e67e76b6c3f6ce91f7c52def5af501b4e0f3a2"
 
 [[projects]]
   digest = "1:342378ac4dcb378a5448dd723f0784ae519383532f5e70ade24132c4c8693202"
