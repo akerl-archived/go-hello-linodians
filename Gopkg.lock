@@ -31,7 +31,7 @@
   name = "github.com/akerl/go-linodians"
   packages = ["api"]
   pruneopts = "UT"
-  revision = "30d16299bab8bb49fbe511f512de2c6ead4024a7"
+  revision = "a2830632836b6024cf276a8dc860b4f9ae5c9bd8"
 
 [[projects]]
   digest = "1:66b3310cf22cdc96c35ef84ede4f7b9b370971c4025f394c89a2638729653b11"
@@ -158,7 +158,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:24641a15105cc4281b8a4a701ac4019194618102c327b1495485b3f19ffdd53e"
+  digest = "1:4707510b4e6efd4c8a1cec8822f504b8b42c8cbdad63a2caf8a41eff5d99bbcc"
   name = "golang.org/x/net"
   packages = [
     "context",
@@ -166,7 +166,7 @@
     "html/atom",
   ]
   pruneopts = "UT"
-  revision = "26e67e76b6c3f6ce91f7c52def5af501b4e0f3a2"
+  revision = "2f5d2388922f370f4355f327fcf4cfe9f5583908"
 
 [[projects]]
   digest = "1:342378ac4dcb378a5448dd723f0784ae519383532f5e70ade24132c4c8693202"
