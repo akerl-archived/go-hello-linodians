@@ -11,11 +11,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:763614c6023937f1260905ac4dc1ee790459cb667057da802013c9feaebb1ed1"
+  digest = "1:39e07b9b87327e50f6b1032d92226ac0e0f971a8525fe70899ed280c3d50a896"
   name = "github.com/akerl/go-indefinite-article"
   packages = ["indefinite"]
   pruneopts = "UT"
-  revision = "b0fecdc559bae8e5ba04a87a5cc783de635b553e"
+  revision = "ada34bc6a1fd555f9a49e9a20d0c6cf72810b340"
 
 [[projects]]
   digest = "1:2c73359f7de026bb96d5f00bea4e0d163108934589e49844c7abaf6fe728dc73"
@@ -32,6 +32,18 @@
   packages = ["api"]
   pruneopts = "UT"
   revision = "40d2fa9fc08222bc8c438fef37f69f95ced16ebb"
+
+[[projects]]
+  branch = "master"
+  digest = "1:d644abd96f6bcda65cb7430ca3dfe2a5af05705c8c6c3ca53724cf1c44c10ca8"
+  name = "github.com/akerl/timber"
+  packages = [
+    "log",
+    "log/events",
+    "log/levels",
+  ]
+  pruneopts = "UT"
+  revision = "02c471ab033b140ab9763f6dc2f58b550c968835"
 
 [[projects]]
   digest = "1:66b3310cf22cdc96c35ef84ede4f7b9b370971c4025f394c89a2638729653b11"
@@ -54,7 +66,7 @@
   version = "v1.6.0"
 
 [[projects]]
-  digest = "1:4dd31ef6f5ce3b57aacce4b0885b066f22cc4feb95da00a7ea7200c019c0c174"
+  digest = "1:b03d71ca2664bf579cf9a72e49ed3d21d16313e686bb12829431f63a8e68330b"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -90,8 +102,8 @@
     "service/sts",
   ]
   pruneopts = "UT"
-  revision = "85d9dfd77e6d694e83c3ac054141cb5e81eecc7f"
-  version = "v1.15.43"
+  revision = "a8ff9e4804fc89c994b731b1c057640ab2aecff3"
+  version = "v1.15.45"
 
 [[projects]]
   digest = "1:2209584c0f7c9b68c23374e659357ab546e1b70eec2761f03280f69a8fd23d77"
@@ -134,12 +146,12 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:5abd6a22805b1919f6a6bca0ae58b13cef1f3412812f38569978f43ef02743d4"
+  digest = "1:b98e7574fc27ec166fb31195ec72c3bd0bffd73926d3612eb4c929bc5236f75b"
   name = "github.com/go-ini/ini"
   packages = ["."]
   pruneopts = "UT"
-  revision = "5cf292cae48347c2490ac1a58fe36735fb78df7e"
-  version = "v1.38.2"
+  revision = "7b294651033cd7d9e7f0d9ffa1b75ed1e198e737"
+  version = "v1.38.3"
 
 [[projects]]
   digest = "1:a63cff6b5d8b95638bfe300385d93b2a6d9d687734b863da8e09dc834510a690"
