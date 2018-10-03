@@ -4,15 +4,19 @@ services:
 - docker
 env:
   global:
+  - PATH=$HOME/.local/bin:$PATH
   - PKGFORGE_STATEFILE=/tmp/pkgforge
   - BUCKET=akerl-go-hello-linodians
+  - secure: Cno4Bm64p7clAus/uoMZmihyJYB0jWiELD1RorrBfPI4R/EWVw/LFCQaVxxETcbhuGCSA5Pvo79p9vfZyzBt6hLQd08CdaPdasdnMxwXvRqIHhDbW/kVutpD+PTAfhV/ze4aMU560RW+G9G+O0CpeJ5Rv2j2hRwK36w80k0EdIPKGry6BBiin0gan8m6YO99rEpcCzuybJrOEx91/jA9FyD/T45+h0QKV1sWvp5q+3v/V3+mVKlo0g/RKAIqr3xqN1I3jeJcNuJaDxVVafWr8FpDD97y3ZnSEKQCupPlcw3OwgsL2K4AkdOwbdebJ+P8Y/B5RKrjOcjD8H9enA/olAzL6rffnlF1Qe6LF6Bx20PODFVj+/9pWVPV/zO704UsWXNQzRVTwRS7kmw+Y1Cw3uLN0NmNGWqyZSVd2SvykH4KjAkQa+OfXsStqfBaBXMC9aay9o3XuEJV0NkdmP8UQsIfhn6ukKCRl8OfvSNbwOYuVYExdJR+YuZ9mR7UrKoOMMdsuvxCh/DBMd0oydT8If1xNCa+UHneBb9D5C4ygp+/O675kzUXsxWsHpqzJdMXZu+CSbObXSCOgbR5v5fCeu3Ex43+4uFCHXuEwnhe5nJ32pkm5u/2V10gjS8gcYBGHHtClBKw3D8HABj+IeepIGkCypuYlWOvMv1Y65Y5z0g=
+  - secure: VkvjczjXRdb/kasLKl4Q806FqlSTXnra2BWw2hPnPnEKycovyqFogF7crQmUkwKvZ/gLnX2EmdoxVwp6A1CqFRKJ0RiSXbFIdBj6lZg52+0ZZ+nfgUTaYYEliNmLn8LI8gnjMm9VhvyN0M3MyKMgB9Daenm0FPaeRZPiGC64cuZcvv7TIrU1dFw33akKyZPCoRzR6m+g814ceLME5j9Qllocz9VJo8csqsS7XpczNUQPaZfkNr/bKyqdH5+lpJldAmL7lnHaX+Akw3RjEQjmDPUAZgHGDno9dQ09vZgxoCWuspjjqV7zDYwi2AmnCio5krMNM49OtN99hjhEg5WuAca3TEGpYJb0lNjiFtlkh7wmFBdQmjUkfrixIpQNEsdyg6EEXpF9lfr75PRTntrMCDuSo8P159cSIlm3vgTreErHnHxd2uqaXfZeABBC9JYyaUI04NZFF60xxQAQ1CGJhZisHB7Tke5NywCgQHdJOVRGI1hvtAp2XTeBvwcEEfZuq1bKemCFLBckus/YQ29YupIKJ9xtPbiHnGAVSVDmeqQXq6/DzGuuqbXpROHel1kByaEaZzymEKRKoJZujSXDAu46d/2IYVj5aBNsWaXarVdUEIspjJJmntIY0LU5/zlgr7iYZtZ6/y2yNRTRfwPLOtQdEWt9xe4/0M1SQ4z+u48=
+  - secure: 5W0OMwExs46RCXGNGnFeC4K6egVT+24fyrOYPb9ZIfdFUH1oin1p1KJ7F30MQgB+rxF2bzK0l0rF4pyRoYSzEMYGGDPwR4YSurK43V32egB5+S8iumcw6UCFzTYp8PGXFJ06WA63AmYRGgA3ey0tLJzZUlLSP8Sh3QMHcllO/hJps/PL2nmnr/SP6iIDnTH/QU/UPVX4QWRniZ12ZRHiujtSSVxp7W4mTSV71BTu4PBLMVxf9cwvDja35ekNkWFqB1RfoLZUPi2Hq3kj01gK78Yd0gXIQ62VnGt8Y/MucEKW0Xh9TVJ7leSq1+Rm0xq3O4YyDpt3nanmir99NqGmoZ+NCCPPDj/Gs0kYh4BlqFQgp+mLjcgLuZar4eMvt22a8TPirp6FNYeWd6zKtZgCCQdZlCpB4zsQgO9lp7eW5Y+ImkEiNyf8xX10N5bfq2G5S10UQlP0/rQuxgzbGLmMwfGIUa0q9t0xhHDpiwFT82aZMb5x9IclXmzFu8V6DJV/vWa5MPicPxovDsbquk2r7V/uOtRAE+KP46dqFJMsSUZdW4Dnl2jqPUQAyHr5VpzVRXGT/0eNnnuW60ITjPXr83YoxS8G21cDb/jg3eh+eYE0qrUyHtbFDIHUQr7HGJdrAY7svjlqU7DHMzRcvQoST0XdgFiCw9gn2oqZ4MkQ/WE=
+before_install:
+- pip install --user awscli
 script: make
 deploy:
   provider: script
-  script:
-  - make release || travis_terminate 1
-  - aws s3 cp pkg/payload.zip "s3://$BUCKET/lambdas/payload-$TRAVIS_TAG.zip" || travis_terminate
-    1
+  script: make release && aws s3 cp pkg/payload.zip "s3://$BUCKET/lambdas/payload-$TRAVIS_TAG.zip"
+    || travis_terminate 1
   skip_cleanup: true
   on:
     tags: true
