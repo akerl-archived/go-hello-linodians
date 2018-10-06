@@ -11,11 +11,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:39e07b9b87327e50f6b1032d92226ac0e0f971a8525fe70899ed280c3d50a896"
+  digest = "1:f185bf4ed04a6c588737358806d5c99017c5877f059aaf577993bf6bbc72322c"
   name = "github.com/akerl/go-indefinite-article"
   packages = ["indefinite"]
   pruneopts = "UT"
-  revision = "ada34bc6a1fd555f9a49e9a20d0c6cf72810b340"
+  revision = "56ca7f44348b03555d58a90bcfb061938c895a26"
 
 [[projects]]
   digest = "1:2c73359f7de026bb96d5f00bea4e0d163108934589e49844c7abaf6fe728dc73"
