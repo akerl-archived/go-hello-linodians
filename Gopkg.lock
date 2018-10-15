@@ -66,7 +66,7 @@
   version = "v1.6.0"
 
 [[projects]]
-  digest = "1:d7923487ee82c18779808b8103ce24255eda162462ec16519b8dfa9ec0f7711b"
+  digest = "1:bc2410ad4d4fb637698c3c71d514cdf38a43a8c5f83c3c415af1925e426abdc5"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -103,8 +103,8 @@
     "service/sts",
   ]
   pruneopts = "UT"
-  revision = "46fe04784968cd7b54e859fcce45753456f736ac"
-  version = "v1.15.52"
+  revision = "bf8067ceb6e7f51e150c218972dccfeeed892b85"
+  version = "v1.15.54"
 
 [[projects]]
   digest = "1:2209584c0f7c9b68c23374e659357ab546e1b70eec2761f03280f69a8fd23d77"
@@ -120,7 +120,7 @@
   name = "github.com/dghubble/go-twitter"
   packages = ["twitter"]
   pruneopts = "UT"
-  revision = "a34e9059cd58e96429cee9c8a87fd8d907da6843"
+  revision = "e75339c4bc3d739058b5e43806e7accda132fb53"
 
 [[projects]]
   digest = "1:144f5984ed1f07aa8fa2468844f856b1ac8e93ac94e1fd19fbf69ce034d9ef92"
@@ -147,12 +147,12 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:b98e7574fc27ec166fb31195ec72c3bd0bffd73926d3612eb4c929bc5236f75b"
+  digest = "1:15e27372d379b45b18ac917b9dafc45c45485239490ece18cca97a12f9591146"
   name = "github.com/go-ini/ini"
   packages = ["."]
   pruneopts = "UT"
-  revision = "7b294651033cd7d9e7f0d9ffa1b75ed1e198e737"
-  version = "v1.38.3"
+  revision = "9c8236e659b76e87bf02044d06fde8683008ff3e"
+  version = "v1.39.0"
 
 [[projects]]
   digest = "1:a63cff6b5d8b95638bfe300385d93b2a6d9d687734b863da8e09dc834510a690"
@@ -179,7 +179,7 @@
     "html/atom",
   ]
   pruneopts = "UT"
-  revision = "146acd28ed5894421fb5aac80ca93bc1b1f46f87"
+  revision = "49bb7cea24b1df9410e1712aa6433dae904ff66a"
 
 [[projects]]
   digest = "1:342378ac4dcb378a5448dd723f0784ae519383532f5e70ade24132c4c8693202"
