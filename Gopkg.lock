@@ -31,7 +31,7 @@
   name = "github.com/akerl/go-linodians"
   packages = ["api"]
   pruneopts = "UT"
-  revision = "bc44b34aff47358ae0e861b453aacdfb0350623b"
+  revision = "ab00724d93ca6ce4222e7f0123041cb8ed29592b"
 
 [[projects]]
   branch = "master"
