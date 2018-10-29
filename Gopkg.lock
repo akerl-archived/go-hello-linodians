@@ -172,7 +172,7 @@
     "html/atom",
   ]
   pruneopts = "UT"
-  revision = "9b4f9f5ad5197c79fd623a3638e70d8b26cef344"
+  revision = "c44066c5c816ec500d459a2a324a753f78531ae0"
 
 [[projects]]
   digest = "1:342378ac4dcb378a5448dd723f0784ae519383532f5e70ade24132c4c8693202"
