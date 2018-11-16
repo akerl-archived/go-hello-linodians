@@ -2,12 +2,12 @@
 
 
 [[projects]]
-  digest = "1:a62f6ed230a8cd138a9efbe718e7d0b0294f139266f5f55cd942769a9aac8de2"
+  digest = "1:573fa46f8d413d4bc3f7cc5e86b2c43cb21559f4fb0a19d9874d228e28fdc07c"
   name = "github.com/PuerkitoBio/goquery"
   packages = ["."]
   pruneopts = "UT"
-  revision = "dc2ec5c7ca4d9aae063b79b9f581dd3ea6afd2b2"
-  version = "v1.4.1"
+  revision = "2d2796f41742ece03e8086188fa4db16a3a0b458"
+  version = "v1.5.0"
 
 [[projects]]
   branch = "master"
@@ -66,7 +66,7 @@
   version = "v1.6.0"
 
 [[projects]]
-  digest = "1:8efa8663e84ed395d37efc5cdb8a0e31365f46dec546eaf4afabee7eb012bc07"
+  digest = "1:176bfeb168867283ee97848f5e2cf9a0b6c9f395ea8c6d547907dfba845e0249"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -104,8 +104,8 @@
     "service/sts",
   ]
   pruneopts = "UT"
-  revision = "5021928b560f2919fa37e159720a45ea13b18d8f"
-  version = "v1.15.76"
+  revision = "64fc3d5c40fffc817c1cc1c1d89a6e482bf1120d"
+  version = "v1.15.77"
 
 [[projects]]
   digest = "1:2209584c0f7c9b68c23374e659357ab546e1b70eec2761f03280f69a8fd23d77"
