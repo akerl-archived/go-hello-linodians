@@ -66,7 +66,7 @@
   version = "v1.6.0"
 
 [[projects]]
-  digest = "1:176bfeb168867283ee97848f5e2cf9a0b6c9f395ea8c6d547907dfba845e0249"
+  digest = "1:7de2b7a39fd40437d31fe44462d4292c9c48f92ed798f72bdd1bf23a5811c451"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -104,8 +104,8 @@
     "service/sts",
   ]
   pruneopts = "UT"
-  revision = "64fc3d5c40fffc817c1cc1c1d89a6e482bf1120d"
-  version = "v1.15.77"
+  revision = "5ebc7a404e942062fd3aa7ff50975498716eb990"
+  version = "v1.15.78"
 
 [[projects]]
   digest = "1:2209584c0f7c9b68c23374e659357ab546e1b70eec2761f03280f69a8fd23d77"
@@ -121,7 +121,7 @@
   name = "github.com/dghubble/go-twitter"
   packages = ["twitter"]
   pruneopts = "UT"
-  revision = "e75339c4bc3d739058b5e43806e7accda132fb53"
+  revision = "22773114c241a203bc3da6895f16480a4524cb81"
 
 [[projects]]
   digest = "1:144f5984ed1f07aa8fa2468844f856b1ac8e93ac94e1fd19fbf69ce034d9ef92"
@@ -132,12 +132,12 @@
   version = "v0.4.0"
 
 [[projects]]
-  digest = "1:ace1aef6acdf2c4647365dc87c14fb8b71ed8bb0b3ae114ffb216614a24da219"
+  digest = "1:fba61d8584058169c5bd4625196f33077ba937f7131625d4440686c5e4cff380"
   name = "github.com/dghubble/sling"
   packages = ["."]
   pruneopts = "UT"
-  revision = "eb56e89ac5088bebb12eef3cb4b293300f43608b"
-  version = "v1.1.0"
+  revision = "e2624bf29a7de45ab0802b09aea94ca0a7815c5f"
+  version = "v1.2.0"
 
 [[projects]]
   digest = "1:2cd7915ab26ede7d95b8749e6b1f933f1c6d5398030684e6505940a10f31cfda"
