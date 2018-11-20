@@ -10,8 +10,8 @@ import (
 	"github.com/akerl/go-lambda/s3"
 	"github.com/akerl/go-linodians/api"
 	"github.com/aws/aws-lambda-go/lambda"
+	s3api "github.com/aws/aws-sdk-go-v2/service/s3"
 	"github.com/aws/aws-sdk-go/aws/awserr"
-	s3api "github.com/aws/aws-sdk-go/service/s3"
 	"github.com/dghubble/go-twitter/twitter"
 	"github.com/dghubble/oauth1"
 	"github.com/dghubble/sling"
@@ -139,13 +139,17 @@ func writeOld(old api.Company) error {
 	if err != nil {
 		return err
 	}
+	s3client, err := s3.Client()
+	if err != nil {
+		return err
+	}
 	input := &s3api.PutObjectInput{
 		Body:   bytes.NewReader(data),
 		Bucket: &bucket,
 		Key:    &c.CacheFile,
 	}
-	s3client := s3.Client()
-	_, err = s3client.PutObject(input)
+	req := s3client.PutObjectRequest(input)
+	_, err = req.Send()
 	return err
 }
 
