@@ -18,12 +18,12 @@
   revision = "56ca7f44348b03555d58a90bcfb061938c895a26"
 
 [[projects]]
-  digest = "1:2c73359f7de026bb96d5f00bea4e0d163108934589e49844c7abaf6fe728dc73"
+  digest = "1:f70a2021cc3d645021d4dfc1843b7130c2e1b9234f3a8787d182bf841e8d078f"
   name = "github.com/akerl/go-lambda"
   packages = ["s3"]
   pruneopts = "UT"
-  revision = "3d505c32ffe120d3e8dab6c6e34e4ad92aa23c7a"
-  version = "0.2.3"
+  revision = "a5eb7e6f5f9ff3357a077cddd34f23d7e1b42ac5"
+  version = "0.3.0"
 
 [[projects]]
   branch = "master"
@@ -66,55 +66,29 @@
   version = "v1.7.0"
 
 [[projects]]
-  digest = "1:e9832d7477570e5550889d27fecb3873cd4c71a0e11f9d19c68f2941be74e3e2"
+  digest = "1:6b80a36cb727b7a9fdaad336a76af8b34a059b28d38600afd19209503f67eeae"
   name = "github.com/aws/aws-sdk-go"
-  packages = [
-    "aws",
-    "aws/awserr",
-    "aws/awsutil",
-    "aws/client",
-    "aws/client/metadata",
-    "aws/corehandlers",
-    "aws/credentials",
-    "aws/credentials/ec2rolecreds",
-    "aws/credentials/endpointcreds",
-    "aws/credentials/stscreds",
-    "aws/csm",
-    "aws/defaults",
-    "aws/ec2metadata",
-    "aws/endpoints",
-    "aws/request",
-    "aws/session",
-    "aws/signer/v4",
-    "internal/ini",
-    "internal/s3err",
-    "internal/sdkio",
-    "internal/sdkrand",
-    "internal/sdkuri",
-    "internal/shareddefaults",
-    "private/protocol",
-    "private/protocol/eventstream",
-    "private/protocol/eventstream/eventstreamapi",
-    "private/protocol/query",
-    "private/protocol/query/queryutil",
-    "private/protocol/rest",
-    "private/protocol/restxml",
-    "private/protocol/xml/xmlutil",
-    "service/s3",
-    "service/sts",
-  ]
+  packages = ["aws/awserr"]
   pruneopts = "UT"
-  revision = "333869724b050875e82f4e593488ad2464c41331"
-  version = "v1.15.83"
+  revision = "ceab7b7ac6f535d1397f124620720b5145f1ad59"
+  version = "v1.15.88"
 
 [[projects]]
-  digest = "1:6d7c9cd46acb6900b419e1418246743476fed809a1672081ad45db6befd537e8"
+  digest = "1:4d4e43dde8f1abbef98f5e0e7e4fd6f0e98cbb81d3407cfb3b9aee6fcbf877d1"
   name = "github.com/aws/aws-sdk-go-v2"
   packages = [
     "aws",
     "aws/awserr",
+    "aws/defaults",
+    "aws/ec2metadata",
+    "aws/ec2rolecreds",
+    "aws/endpointcreds",
+    "aws/endpoints",
+    "aws/external",
     "aws/signer/v4",
+    "aws/stscreds",
     "internal/awsutil",
+    "internal/ini",
     "internal/sdk",
     "private/protocol",
     "private/protocol/query",
@@ -124,26 +98,27 @@
     "private/protocol/xml",
     "private/protocol/xml/xmlutil",
     "service/s3",
+    "service/sts",
   ]
   pruneopts = "UT"
   revision = "d52522b5f4b95591ff6528d7c54923951aadf099"
   version = "v2.0.0-preview.5"
 
 [[projects]]
-  digest = "1:2209584c0f7c9b68c23374e659357ab546e1b70eec2761f03280f69a8fd23d77"
+  digest = "1:553f73a4171c265045ae4f5d3122429ecf2c9c0c232c91f336127fe45480104a"
   name = "github.com/cenkalti/backoff"
   packages = ["."]
   pruneopts = "UT"
-  revision = "2ea60e5f094469f9e65adb9cd103795b73ae743e"
-  version = "v2.0.0"
+  revision = "62661b46c4093e2c1f38d943e663db1a29873e80"
+  version = "v2.1.0"
 
 [[projects]]
   branch = "master"
-  digest = "1:63c394402a65bb9b6cb355e2d576c313bab65eb57f3b92f599386d614b7580dc"
+  digest = "1:d806797ee643c9e821aebed5e676a105e41afef625a70636e5650f37d984d407"
   name = "github.com/dghubble/go-twitter"
   packages = ["twitter"]
   pruneopts = "UT"
-  revision = "66265eae502c0c5e5542b34e9e2871520050e330"
+  revision = "22c4b7bc9a27d64433c5c9c419311b53f899eac1"
 
 [[projects]]
   digest = "1:f3cacf5fd0e718de3f43af615e84372b318f61889140f6854f98b05894001d99"
@@ -186,23 +161,22 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:17847c677cb69303e0b8606b690f400c53485620a98d288aee1a215235118fcb"
+  digest = "1:1a1ecfa7b54ca3f7a0115ab5c578d7d6a5d8b605839c549e80260468c42f8be7"
   name = "golang.org/x/net"
   packages = [
-    "context",
     "html",
     "html/atom",
   ]
   pruneopts = "UT"
-  revision = "adae6a3d119ae4890b46832a2e88a95adc62b8e7"
+  revision = "351d144fa1fc0bd934e2408202be0c29f25e35a0"
 
 [[projects]]
-  digest = "1:342378ac4dcb378a5448dd723f0784ae519383532f5e70ade24132c4c8693202"
+  digest = "1:4d2e5a73dc1500038e504a8d78b986630e3626dc027bc030ba5c75da257cdb96"
   name = "gopkg.in/yaml.v2"
   packages = ["."]
   pruneopts = "UT"
-  revision = "5420a8b6744d3b0345ab293f6fcba19c978f1183"
-  version = "v2.2.1"
+  revision = "51d6538a90f86fe93ac480b35f37b2be17fef232"
+  version = "v2.2.2"
 
 [solve-meta]
   analyzer-name = "dep"
