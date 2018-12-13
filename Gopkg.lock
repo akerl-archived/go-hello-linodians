@@ -70,8 +70,8 @@
   name = "github.com/aws/aws-sdk-go"
   packages = ["aws/awserr"]
   pruneopts = "UT"
-  revision = "c4e0e593d5f18b478f17ff0e86b56d41a70ced2d"
-  version = "v1.16.2"
+  revision = "a00e7512a2533cd96e525fe50607f9fe98badec3"
+  version = "v1.16.4"
 
 [[projects]]
   digest = "1:303a306cefbdb62f9f65e89e841624dff2acae2fc32639b0432b6d4a42d762fc"
