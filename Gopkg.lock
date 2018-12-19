@@ -70,8 +70,8 @@
   name = "github.com/aws/aws-sdk-go"
   packages = ["aws/awserr"]
   pruneopts = "UT"
-  revision = "a21788f1964e28dc1e3932e595db6707ce8070cf"
-  version = "v1.16.7"
+  revision = "8d41be8a37391ddc4feb2d16f5ca6f440eb8b356"
+  version = "v1.16.8"
 
 [[projects]]
   digest = "1:303a306cefbdb62f9f65e89e841624dff2acae2fc32639b0432b6d4a42d762fc"
@@ -114,11 +114,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:d806797ee643c9e821aebed5e676a105e41afef625a70636e5650f37d984d407"
+  digest = "1:4df66ab104e315cae30e5630f4563bf7b46661f8efea9a0bc4ff2edde4dfaab0"
   name = "github.com/dghubble/go-twitter"
   packages = ["twitter"]
   pruneopts = "UT"
-  revision = "22c4b7bc9a27d64433c5c9c419311b53f899eac1"
+  revision = "7ecc41c771b6fe11669159da651b6adf06ee60bf"
 
 [[projects]]
   digest = "1:f3cacf5fd0e718de3f43af615e84372b318f61889140f6854f98b05894001d99"
