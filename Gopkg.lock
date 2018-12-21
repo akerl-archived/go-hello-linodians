@@ -31,7 +31,7 @@
   name = "github.com/akerl/go-linodians"
   packages = ["api"]
   pruneopts = "UT"
-  revision = "cec831fe19494f5de6a205e1b6524e204b9557ea"
+  revision = "e4dc40339a92aa3f7aabf364bc42865b66d2883e"
 
 [[projects]]
   branch = "master"
@@ -70,8 +70,8 @@
   name = "github.com/aws/aws-sdk-go"
   packages = ["aws/awserr"]
   pruneopts = "UT"
-  revision = "cae66ecf52e0171f937f1fa80e12130fbb652474"
-  version = "v1.16.9"
+  revision = "103cb51d5be1d3e4735da3ed250f27df6c73fadf"
+  version = "v1.16.10"
 
 [[projects]]
   digest = "1:303a306cefbdb62f9f65e89e841624dff2acae2fc32639b0432b6d4a42d762fc"
@@ -168,7 +168,7 @@
     "html/atom",
   ]
   pruneopts = "UT"
-  revision = "e147a9138326bc0e9d4e179541ffd8af41cff8a9"
+  revision = "927f97764cc334a6575f4b7a1584a147864d5723"
 
 [[projects]]
   digest = "1:4d2e5a73dc1500038e504a8d78b986630e3626dc027bc030ba5c75da257cdb96"
