@@ -62,8 +62,8 @@
     "lambdacontext",
   ]
   pruneopts = "UT"
-  revision = "9e3676ee8ca83aee500682f382e10b9d03660093"
-  version = "v1.8.0"
+  revision = "928161204cad89472f9e6b5dd49ce16bc91230de"
+  version = "v1.8.1"
 
 [[projects]]
   digest = "1:6b80a36cb727b7a9fdaad336a76af8b34a059b28d38600afd19209503f67eeae"
