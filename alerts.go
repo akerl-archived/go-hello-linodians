@@ -104,5 +104,5 @@ func buildMessage(options []*template.Template, e api.Employee) (string, error) 
 			return res.String(), nil
 		}
 	}
-	return "", fmt.Errorf("No suitable template found")
+	return "", fmt.Errorf("no suitable template found")
 }

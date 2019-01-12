@@ -45,7 +45,7 @@ func sendDirectMessage(message string) error {
 		return err
 	}
 	if resp.StatusCode != 200 {
-		return fmt.Errorf("Bad HTTP code: %d", resp.StatusCode)
+		return fmt.Errorf("bad HTTP code: %d", resp.StatusCode)
 	}
 	return nil
 }
