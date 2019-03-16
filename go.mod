@@ -7,7 +7,7 @@ require (
 	github.com/akerl/go-lambda v0.1.0
 	github.com/akerl/go-linodians v0.0.1
 	github.com/aws/aws-lambda-go v1.9.0
-	github.com/aws/aws-sdk-go v1.18.2
+	github.com/aws/aws-sdk-go v1.18.3
 	github.com/aws/aws-sdk-go-v2 v0.7.0
 	github.com/cenkalti/backoff v2.1.1+incompatible // indirect
 	github.com/dghubble/go-twitter v0.0.0-20190305084156-0022a70e9bee
