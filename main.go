@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -149,7 +150,7 @@ func writeOld(old api.Company) error {
 		Key:    &c.CacheFile,
 	}
 	req := s3client.PutObjectRequest(input)
-	_, err = req.Send()
+	_, err = req.Send(context.Background())
 	return err
 }
 
